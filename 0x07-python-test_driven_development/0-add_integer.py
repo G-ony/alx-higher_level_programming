@@ -1,26 +1,16 @@
+#!/usr/bin/python3
+add_integer = __import__('0-add_integer').add_integer
 
-"""
-A module that adds 2 integers
-It returns an integer
-"""
+print(add_integer(1, 2))
+print(add_integer(100, -2))
+print(add_integer(2))
+print(add_integer(100.3, -2))
+try:
+    print(add_integer(4, "School"))
+except Exception as e:
+    print(e)
+try:
+    print(add_integer(None))
+except Exception as e:
+    print(e)
 
-
-def add_integer(a, b=98):
-    """
-    Returns the addition of a and b
-    or error if a and b is not an integer or float
-    """
-    if type(a) is not int and type(a) is not float:
-        raise TypeError("a must be an integer")
-    if type(b) is not int and type(b) is not float:
-        raise TypeError("b must be an integer")
-    
-    """
-    casting a and b to be an integer value
-    """
-    if type(a) is float:
-        a = int(a)
-    if type(b) is float:
-        b = int(b)
-    
-    return a + b
