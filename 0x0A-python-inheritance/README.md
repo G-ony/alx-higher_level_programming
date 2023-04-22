@@ -1,3 +1,1 @@
-0x0A-python-inheritance
-__pycache__
-tests
+# Solution to tasks on Python - Inheritance
